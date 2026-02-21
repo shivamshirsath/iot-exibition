@@ -309,12 +309,14 @@ body.hov #cur-ring{width:44px;height:44px;border-color:#c0392b;}
 /* Footer */
 .footer {
   margin: 0 44px;
-  padding: 30px 0 50px; /* Slightly more breathing room */
+  padding: 30px 0 50px;
   border-top: 1px solid rgba(201,168,76,.1);
   display: flex;
   align-items: center;
-  /* This pushes the two items to the far left and far right */
-  justify-content: space-between; 
+  /* Centering both badges in the middle of the screen */
+  justify-content: center; 
+  /* Adjust this value to increase or decrease the space between them */
+  gap: 40px; 
   flex-wrap: wrap;
   opacity: 0;
   animation: fadeUp .6s ease 3.5s forwards;
@@ -322,25 +324,23 @@ body.hov #cur-ring{width:44px;height:44px;border-color:#c0392b;}
 
 .badge {
   font-family: 'Share Tech Mono', monospace;
-  /* Increased font size and adjusted spacing for clarity */
-  font-size: 14px; 
-  line-height: 1.5;
-  letter-spacing: 1.5px; /* Reduced slightly for better readability at larger sizes */
+  font-size: 15px; /* Slightly bigger as requested */
+  line-height: 1.6;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255,255,255,.7); /* Made it slightly brighter for clarity */
-  padding: 10px 20px;
+  color: rgba(255,255,255,.8); /* Brighter for better clarity */
+  padding: 12px 24px;
   border: 1px solid rgba(201,168,76,.2);
   transition: all .3s ease;
+  /* Centers the text lines (Name & Title) within the badge */
+  text-align: center; 
+  min-width: 250px; /* Ensures both badges have a consistent width */
 }
-
-/* Optional: Align text to the left for the left badge and right for the right badge */
-.badge:first-child { text-align: left; }
-.badge:last-child { text-align: right; }
 
 .badge:hover {
   border-color: rgba(201,168,76,.5);
   color: #fff;
-  background: rgba(201,168,76,.05); /* Subtle hint of color on hover */
+  background: rgba(201,168,76,.05);
 }
 
 @media(max-width:640px){
