@@ -307,9 +307,41 @@ body.hov #cur-ring{width:44px;height:44px;border-color:#c0392b;}
 .cta-sub{margin-top:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;letter-spacing:3px;color:rgba(255,255,255,.35);}
 
 /* Footer */
-.footer{margin:0 44px;padding:22px 0 42px;border-top:1px solid rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp .6s ease 3.5s forwards;}
-.badge{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.55);padding:6px 16px;border:1px solid rgba(201,168,76,.2);transition:border-color .3s,color .3s;}
-.badge:hover{border-color:rgba(201,168,76,.5);color:#fff;}
+.footer {
+  margin: 0 44px;
+  padding: 30px 0 50px; /* Slightly more breathing room */
+  border-top: 1px solid rgba(201,168,76,.1);
+  display: flex;
+  align-items: center;
+  /* This pushes the two items to the far left and far right */
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp .6s ease 3.5s forwards;
+}
+
+.badge {
+  font-family: 'Share Tech Mono', monospace;
+  /* Increased font size and adjusted spacing for clarity */
+  font-size: 14px; 
+  line-height: 1.5;
+  letter-spacing: 1.5px; /* Reduced slightly for better readability at larger sizes */
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7); /* Made it slightly brighter for clarity */
+  padding: 10px 20px;
+  border: 1px solid rgba(201,168,76,.2);
+  transition: all .3s ease;
+}
+
+/* Optional: Align text to the left for the left badge and right for the right badge */
+.badge:first-child { text-align: left; }
+.badge:last-child { text-align: right; }
+
+.badge:hover {
+  border-color: rgba(201,168,76,.5);
+  color: #fff;
+  background: rgba(201,168,76,.05); /* Subtle hint of color on hover */
+}
 
 @media(max-width:640px){
   .hero,.orn-band,.divider,.circuit,.footer{padding-left:16px;padding-right:16px;}
